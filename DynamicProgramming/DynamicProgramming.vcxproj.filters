@@ -27,12 +27,27 @@
     <ClCompile Include="benchmarks\BenchmarksMain.cpp">
       <Filter>Benchmarks</Filter>
     </ClCompile>
+    <ClCompile Include="tests\FibonacciTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fibonacci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmarks\FibonacciBenchmark.cpp">
+      <Filter>Benchmarks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Includes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="benchmarks\Benchmarksmain.h">
+      <Filter>Benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fibonacci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmarks\FibonacciBenchmark.h">
       <Filter>Benchmarks</Filter>
     </ClInclude>
   </ItemGroup>
