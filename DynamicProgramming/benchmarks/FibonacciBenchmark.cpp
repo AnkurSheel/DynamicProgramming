@@ -7,9 +7,9 @@
 void SetState(long fib, benchmark::State& state)
 {
   std::stringstream ss;
-  ss << fib;
+  ss << "Result : " << state.range(0) << " : " << fib;
   state.SetLabel(ss.str());
-  state.SetBytesProcessed(state.iterations() * state.range(0));
+  state.SetBytesProcessed(state.iterations() * state.range(0) * sizeof(int));
   state.SetItemsProcessed(state.iterations() * state.range(0));
   state.SetComplexityN(state.range_x());
 }

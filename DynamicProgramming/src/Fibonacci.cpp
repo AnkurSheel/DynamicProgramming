@@ -10,9 +10,7 @@ long FibonacciMemonized(long n, std::map<long, long>& computedValues)
   {
     return computedValues[n];
   }
-  computedValues.insert(make_pair(n - 1, FibonacciMemonized(n - 1, computedValues)));
-  computedValues.insert(make_pair(n - 2, FibonacciMemonized(n - 2, computedValues)));
-  long newValue = (computedValues[n - 1] + computedValues[n - 2]) % MOD;
+  long newValue = (FibonacciMemonized(n - 1, computedValues) + FibonacciMemonized(n - 2, computedValues)) % MOD;
   computedValues.insert(make_pair(n, newValue));
   return newValue;
 }
@@ -35,7 +33,7 @@ long Fibonacci(long n)
 long FibonacciMemonized(long n)
 {
   std::map<long, long> computedValues;
-  computedValues.insert(make_pair(0, 1));
+  computedValues.insert(make_pair(0, 0));
   computedValues.insert(make_pair(1, 1));
   return FibonacciMemonized(n, computedValues);
 }
@@ -43,6 +41,14 @@ long FibonacciMemonized(long n)
 //  *******************************************************************************************************************
 long FibonacciDP(long n)
 {
+  if (n == 0)
+  {
+    return 0;
+  }
+  if (n == 1)
+  {
+    return 1;
+  }
   long* results = new long[n + 1];
   results[0] = 0;
   results[1] = 1;

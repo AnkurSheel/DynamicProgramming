@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClCompile Include="benchmarks\BenchmarksMain.cpp" />
     <ClCompile Include="benchmarks\FibonacciBenchmark.cpp" />
+    <ClCompile Include="benchmarks\CustomConsoleReporter.cpp" />
     <ClCompile Include="src\Fibonacci.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="tests\FibonacciTest.cpp" />
@@ -147,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="benchmarks\Benchmarksmain.h" />
     <ClInclude Include="benchmarks\FibonacciBenchmark.h" />
+    <ClInclude Include="benchmarks\CustomConsoleReporter.h" />
     <ClInclude Include="src\Fibonacci.h" />
     <ClInclude Include="src\Includes.h" />
   </ItemGroup>

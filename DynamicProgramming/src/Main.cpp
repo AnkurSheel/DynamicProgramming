@@ -13,17 +13,19 @@ int main(int argc, char** argv)
 #else
 
 #include "..\benchmarks\Benchmarksmain.h"
+#include "..\benchmarks\CustomConsoleReporter.h"
 #include "benchmark/benchmark_api.h"
 
 int main(int argc, char** argv)
 {
   SetupAllBenchMarks();
+  cCustomConsoleReporter consoleReporter;
   ::benchmark::Initialize(&argc, argv);
   if (::benchmark::ReportUnrecognizedArguments(argc, argv))
   {
     return 1;
   }
-  ::benchmark::RunSpecifiedBenchmarks();
+  ::benchmark::RunSpecifiedBenchmarks(&consoleReporter);
 }
 
 #endif

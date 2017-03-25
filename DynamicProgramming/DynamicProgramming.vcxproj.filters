@@ -36,6 +36,9 @@
     <ClCompile Include="benchmarks\FibonacciBenchmark.cpp">
       <Filter>Benchmarks</Filter>
     </ClCompile>
+    <ClCompile Include="benchmarks\CustomConsoleReporter.cpp">
+      <Filter>Benchmarks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Includes.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="benchmarks\FibonacciBenchmark.h">
+      <Filter>Benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmarks\CustomConsoleReporter.h">
       <Filter>Benchmarks</Filter>
     </ClInclude>
   </ItemGroup>
