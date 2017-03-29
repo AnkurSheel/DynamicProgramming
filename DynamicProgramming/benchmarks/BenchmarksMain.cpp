@@ -1,5 +1,6 @@
 #ifdef RUN_BENCHMARKS
 #include "Benchmarksmain.h"
+#include "FactorialBenchMark.h"
 #include "FibonacciBenchmark.h"
 #include "benchmark/benchmark_api.h"
 #include "benchmark\reporter.h"
@@ -15,6 +16,12 @@ void SetupAllBenchMarks()
   BENCHMARK(FibonacciDP)->DenseRange(100000, 2100000, 500000)->Unit(kMillisecond)->Complexity();
 
   BENCHMARK(FibonacciDPOptimized)->DenseRange(100000, 2100000, 500000)->Unit(kMillisecond)->Complexity();
+
+  BENCHMARK(FactorialRecursive)->Arg(10000)->Arg(20000)->Unit(kNanosecond)->Complexity();
+
+  BENCHMARK(FactorialDP)->DenseRange(100000, 2100000, 500000)->Unit(kMillisecond)->Complexity();
+
+  BENCHMARK(FactorialDPOptimized)->DenseRange(100000, 2100000, 500000)->Unit(kMillisecond)->Complexity();
 }
 
 #endif

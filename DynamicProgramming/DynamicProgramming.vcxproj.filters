@@ -1,37 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Tests">
       <UniqueIdentifier>{3b39628e-d1ee-4b98-8dfa-2aa472f596ac}</UniqueIdentifier>
     </Filter>
     <Filter Include="Benchmarks">
       <UniqueIdentifier>{9ba452b2-5f31-4ef5-b6c1-deda11f35045}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Examples">
+      <UniqueIdentifier>{1edaac12-a5d7-4212-9d9d-78861b687d96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="benchmarks\BenchmarksMain.cpp">
       <Filter>Benchmarks</Filter>
     </ClCompile>
     <ClCompile Include="tests\FibonacciTest.cpp">
       <Filter>Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Fibonacci.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="benchmarks\FibonacciBenchmark.cpp">
       <Filter>Benchmarks</Filter>
@@ -39,16 +24,23 @@
     <ClCompile Include="benchmarks\CustomConsoleReporter.cpp">
       <Filter>Benchmarks</Filter>
     </ClCompile>
+    <ClCompile Include="tests\FactorialTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmarks\FactorialBenchMark.cpp">
+      <Filter>Benchmarks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fibonacci.cpp">
+      <Filter>Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Factorial.cpp">
+      <Filter>Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Includes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="benchmarks\Benchmarksmain.h">
       <Filter>Benchmarks</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Fibonacci.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="benchmarks\FibonacciBenchmark.h">
       <Filter>Benchmarks</Filter>
@@ -56,5 +48,15 @@
     <ClInclude Include="benchmarks\CustomConsoleReporter.h">
       <Filter>Benchmarks</Filter>
     </ClInclude>
+    <ClInclude Include="benchmarks\FactorialBenchMark.h">
+      <Filter>Benchmarks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Factorial.h">
+      <Filter>Examples</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fibonacci.h">
+      <Filter>Examples</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Includes.h" />
   </ItemGroup>
 </Project>
