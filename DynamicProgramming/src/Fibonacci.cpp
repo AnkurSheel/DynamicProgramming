@@ -26,7 +26,7 @@ long Fibonacci(long n)
   {
     return 1;
   }
-  return Fibonacci(n - 2) + Fibonacci(n - 1);
+  return (Fibonacci(n - 2) + Fibonacci(n - 1)) % MOD;
 }
 
 //  *******************************************************************************************************************

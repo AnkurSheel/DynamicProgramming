@@ -4,7 +4,7 @@
 #include "..\src\Fibonacci.h"
 #include "benchmark/benchmark_api.h"
 
-void SetState(long fib, benchmark::State& state)
+static void SetState(long fib, benchmark::State& state)
 {
   std::stringstream ss;
   ss << "Result : " << state.range(0) << " : " << fib;
@@ -13,6 +13,7 @@ void SetState(long fib, benchmark::State& state)
   state.SetItemsProcessed(state.iterations() * state.range(0));
   state.SetComplexityN(state.range_x());
 }
+
 void FibonacciRecursive(benchmark::State& state)
 {
   long fib = 0;
