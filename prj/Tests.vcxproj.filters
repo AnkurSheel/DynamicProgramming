@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fibonacci">
+      <UniqueIdentifier>{4dff8120-4552-4580-9eea-5d1dc71660e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factorial">
+      <UniqueIdentifier>{6414b78a-323d-4fbd-a2c4-aaf6ff690f12}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tests\FibonacciTest.cpp">
+      <Filter>Fibonacci</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Fibonacci.cpp">
+      <Filter>Fibonacci</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Factorial.cpp">
+      <Filter>Factorial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tests\FactorialTest.cpp">
+      <Filter>Factorial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tests\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Fibonacci.h">
+      <Filter>Fibonacci</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Factorial.h">
+      <Filter>Factorial</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
