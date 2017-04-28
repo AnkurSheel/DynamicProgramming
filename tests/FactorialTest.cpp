@@ -2,29 +2,44 @@
 #include "..\src\Includes.h"
 #include "gtest\gtest.h"
 
-TEST(Factorial, BaseCases)
+using namespace testing;
+
+namespace Tests
 {
-  EXPECT_EQ(1, Factorial(0));
+  class Factorial : public Test
+  {
+    virtual void SetUp() override {}
 
-  EXPECT_EQ(1, FactorialDP(0));
+    virtual void TearDown() override {}
 
-  EXPECT_EQ(1, FactorialDPOptimized(0));
-}
+  protected:
+    cFactorial m_factorial;
+  };
 
-TEST(Factorial, 1)
-{
-  EXPECT_EQ(1, Factorial(1));
+  TEST_F(Factorial, BaseCases)
+  {
+    EXPECT_EQ(1, m_factorial.Recursive(0));
 
-  EXPECT_EQ(1, FactorialDP(1));
+    EXPECT_EQ(1, m_factorial.DP(0));
 
-  EXPECT_EQ(1, FactorialDPOptimized(1));
-}
+    EXPECT_EQ(1, m_factorial.DPOptimized(0));
+  }
 
-TEST(Factorial, 6)
-{
-  EXPECT_EQ(720, Factorial(6));
+  TEST_F(Factorial, 1)
+  {
+    EXPECT_EQ(1, m_factorial.Recursive(1));
 
-  EXPECT_EQ(720, FactorialDP(6));
+    EXPECT_EQ(1, m_factorial.DP(1));
 
-  EXPECT_EQ(720, FactorialDPOptimized(6));
+    EXPECT_EQ(1, m_factorial.DPOptimized(1));
+  }
+
+  TEST_F(Factorial, 6)
+  {
+    EXPECT_EQ(720, m_factorial.Recursive(6));
+
+    EXPECT_EQ(720, m_factorial.DP(6));
+
+    EXPECT_EQ(720, m_factorial.DPOptimized(6));
+  }
 }

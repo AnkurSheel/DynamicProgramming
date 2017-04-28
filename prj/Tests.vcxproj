@@ -87,7 +87,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\extern\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>..\extern\lib\gmock</AdditionalLibraryDirectories>
@@ -116,7 +115,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\extern\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -129,13 +127,16 @@
   <ItemGroup>
     <ClCompile Include="..\src\Factorial.cpp" />
     <ClCompile Include="..\src\Fibonacci.cpp" />
+    <ClCompile Include="..\src\LCS.cpp" />
     <ClCompile Include="..\tests\FactorialTest.cpp" />
     <ClCompile Include="..\tests\FibonacciTest.cpp" />
+    <ClCompile Include="..\tests\LCSTest.cpp" />
     <ClCompile Include="..\tests\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Factorial.h" />
     <ClInclude Include="..\src\Fibonacci.h" />
+    <ClInclude Include="..\src\LCS.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

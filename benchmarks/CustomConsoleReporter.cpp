@@ -3,9 +3,9 @@
 #include <iomanip>
 #include <memory>
 #include <sstream>
-#include "benchmark/colorprint.h"
-#include "benchmark/complexity.h"
-#include "benchmark/string_util.h"
+#include "colorprint.h"
+#include "complexity.h"
+#include "string_util.h"
 
 using namespace benchmark;
 using namespace std;

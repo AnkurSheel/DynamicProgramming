@@ -2,39 +2,54 @@
 #include "..\src\Includes.h"
 #include "gtest\gtest.h"
 
-TEST(Fibonacci, BaseCases)
+using namespace testing;
+
+namespace Tests
 {
-  EXPECT_EQ(0, Fibonacci(0));
-  EXPECT_EQ(1, Fibonacci(1));
+  class Fibonacci : public Test
+  {
+    virtual void SetUp() override {}
 
-  EXPECT_EQ(0, FibonacciMemonized(0));
-  EXPECT_EQ(1, FibonacciMemonized(1));
+    virtual void TearDown() override {}
 
-  EXPECT_EQ(0, FibonacciDP(0));
-  EXPECT_EQ(1, FibonacciDP(1));
+  protected:
+    cFibonacci m_fibonnaci;
+  };
 
-  EXPECT_EQ(0, FibonacciDPOptimized(0));
-  EXPECT_EQ(1, FibonacciDPOptimized(1));
-}
+  TEST_F(Fibonacci, BaseCases)
+  {
+    EXPECT_EQ(0, m_fibonnaci.Recursive(0));
+    EXPECT_EQ(1, m_fibonnaci.Recursive(1));
 
-TEST(Fibonacci, 2)
-{
-  EXPECT_EQ(1, Fibonacci(2));
+    EXPECT_EQ(0, m_fibonnaci.Memonized(0));
+    EXPECT_EQ(1, m_fibonnaci.Memonized(1));
 
-  EXPECT_EQ(1, FibonacciMemonized(2));
+    EXPECT_EQ(0, m_fibonnaci.DP(0));
+    EXPECT_EQ(1, m_fibonnaci.DP(1));
 
-  EXPECT_EQ(1, FibonacciDP(2));
+    EXPECT_EQ(0, m_fibonnaci.DPOptimized(0));
+    EXPECT_EQ(1, m_fibonnaci.DPOptimized(1));
+  }
 
-  EXPECT_EQ(1, FibonacciDPOptimized(2));
-}
+  TEST_F(Fibonacci, 2)
+  {
+    EXPECT_EQ(1, m_fibonnaci.Recursive(2));
 
-TEST(Fibonacci, 6)
-{
-  EXPECT_EQ(8, Fibonacci(6));
+    EXPECT_EQ(1, m_fibonnaci.Memonized(2));
 
-  EXPECT_EQ(8, FibonacciMemonized(6));
+    EXPECT_EQ(1, m_fibonnaci.DP(2));
 
-  EXPECT_EQ(8, FibonacciDP(6));
+    EXPECT_EQ(1, m_fibonnaci.DPOptimized(2));
+  }
 
-  EXPECT_EQ(8, FibonacciDPOptimized(6));
+  TEST_F(Fibonacci, 6)
+  {
+    EXPECT_EQ(8, m_fibonnaci.Recursive(6));
+
+    EXPECT_EQ(8, m_fibonnaci.Memonized(6));
+
+    EXPECT_EQ(8, m_fibonnaci.DP(6));
+
+    EXPECT_EQ(8, m_fibonnaci.DPOptimized(6));
+  }
 }

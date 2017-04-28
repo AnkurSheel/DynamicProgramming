@@ -92,7 +92,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\extern\Include</AdditionalIncludeDirectories>
-      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>benchmark_d.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -134,22 +133,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\benchmarks\BenchMarks.vcxproj.user" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\benchmarks\BenchmarksMain.cpp" />
     <ClCompile Include="..\benchmarks\CustomConsoleReporter.cpp" />
     <ClCompile Include="..\benchmarks\FactorialBenchMark.cpp" />
     <ClCompile Include="..\benchmarks\FibonacciBenchmark.cpp" />
+    <ClCompile Include="..\benchmarks\LCSBenchmark.cpp" />
     <ClCompile Include="..\src\Factorial.cpp" />
     <ClCompile Include="..\src\Fibonacci.cpp" />
+    <ClCompile Include="..\src\LCS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\benchmarks\CustomConsoleReporter.h" />
-    <ClInclude Include="..\benchmarks\FactorialBenchMark.h" />
-    <ClInclude Include="..\benchmarks\FibonacciBenchmark.h" />
     <ClInclude Include="..\src\Factorial.h" />
     <ClInclude Include="..\src\Fibonacci.h" />
+    <ClInclude Include="..\src\LCS.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

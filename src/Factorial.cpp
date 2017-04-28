@@ -2,17 +2,17 @@
 #include "Includes.h"
 
 //  *******************************************************************************************************************
-long Factorial(long n)
+long cFactorial::Recursive(long n)
 {
   if (n == 0)
   {
     return 1;
   }
-  return n * Factorial(n - 1) % MOD;
+  return n * Recursive(n - 1) % MOD;
 }
 
 //  *******************************************************************************************************************
-long FactorialDP(long n)
+long cFactorial::DP(long n)
 {
   long* results = new long[n + 1];
   results[0] = 1;
@@ -26,7 +26,7 @@ long FactorialDP(long n)
 }
 
 //  *******************************************************************************************************************
-long FactorialDPOptimized(long n)
+long cFactorial::DPOptimized(long n)
 {
   long n1 = 1;
   long current = 1;

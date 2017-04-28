@@ -1,19 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Fibonacci">
       <UniqueIdentifier>{2d4728e8-1783-4c54-ab9a-71d6baf7c9ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="Factorial">
       <UniqueIdentifier>{c67f72f2-094f-4a78-95be-02cec596de37}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\benchmarks\BenchMarks.vcxproj.user" />
+    <Filter Include="LCS">
+      <UniqueIdentifier>{0eb469d7-0717-462b-bc29-fabb29ba3298}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Fibonacci.cpp">
@@ -30,11 +26,14 @@
     </ClCompile>
     <ClCompile Include="..\benchmarks\BenchmarksMain.cpp" />
     <ClCompile Include="..\benchmarks\CustomConsoleReporter.cpp" />
+    <ClCompile Include="..\src\LCS.cpp">
+      <Filter>LCS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\benchmarks\LCSBenchmark.cpp">
+      <Filter>LCS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\benchmarks\FibonacciBenchmark.h">
-      <Filter>Fibonacci</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Fibonacci.h">
       <Filter>Fibonacci</Filter>
     </ClInclude>
@@ -42,8 +41,8 @@
       <Filter>Factorial</Filter>
     </ClInclude>
     <ClInclude Include="..\benchmarks\CustomConsoleReporter.h" />
-    <ClInclude Include="..\benchmarks\FactorialBenchMark.h">
-      <Filter>Factorial</Filter>
+    <ClInclude Include="..\src\LCS.h">
+      <Filter>LCS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

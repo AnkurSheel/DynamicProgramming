@@ -6,6 +6,8 @@
 #include <iomanip>
 #include <iostream>
 #include <map>
+#include <algorithm>
+#include <sstream>
 
 #define MOD 1000000007
 

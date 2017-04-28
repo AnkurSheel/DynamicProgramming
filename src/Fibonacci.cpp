@@ -4,19 +4,7 @@
 using namespace std;
 
 //  *******************************************************************************************************************
-long FibonacciMemonized(long n, std::map<long, long>& computedValues)
-{
-  if (computedValues.find(n) != computedValues.end())
-  {
-    return computedValues[n];
-  }
-  long newValue = (FibonacciMemonized(n - 1, computedValues) + FibonacciMemonized(n - 2, computedValues)) % MOD;
-  computedValues.insert(make_pair(n, newValue));
-  return newValue;
-}
-
-//  *******************************************************************************************************************
-long Fibonacci(long n)
+long cFibonacci::Recursive(long n)
 {
   if (n == 0)
   {
@@ -26,20 +14,32 @@ long Fibonacci(long n)
   {
     return 1;
   }
-  return (Fibonacci(n - 2) + Fibonacci(n - 1)) % MOD;
+  return (Recursive(n - 2) + Recursive(n - 1)) % MOD;
 }
 
 //  *******************************************************************************************************************
-long FibonacciMemonized(long n)
+long cFibonacci::Memonized(long n)
 {
   std::map<long, long> computedValues;
   computedValues.insert(make_pair(0, 0));
   computedValues.insert(make_pair(1, 1));
-  return FibonacciMemonized(n, computedValues);
+  return Memonized(n, computedValues);
 }
 
 //  *******************************************************************************************************************
-long FibonacciDP(long n)
+long cFibonacci::Memonized(long n, std::map<long, long>& computedValues)
+{
+  if (computedValues.find(n) != computedValues.end())
+  {
+    return computedValues[n];
+  }
+  long newValue = (Memonized(n - 1, computedValues) + Memonized(n - 2, computedValues)) % MOD;
+  computedValues.insert(make_pair(n, newValue));
+  return newValue;
+}
+
+//  *******************************************************************************************************************
+long cFibonacci::DP(long n)
 {
   if (n == 0)
   {
@@ -62,7 +62,7 @@ long FibonacciDP(long n)
 }
 
 //  *******************************************************************************************************************
-long FibonacciDPOptimized(long n)
+long cFibonacci::DPOptimized(long n)
 {
   if (n == 0)
   {

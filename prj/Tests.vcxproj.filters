@@ -7,6 +7,9 @@
     <Filter Include="Factorial">
       <UniqueIdentifier>{6414b78a-323d-4fbd-a2c4-aaf6ff690f12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LCS">
+      <UniqueIdentifier>{ddf9f37e-8a98-422d-be48-b1970b649715}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\tests\FibonacciTest.cpp">
@@ -22,6 +25,12 @@
       <Filter>Factorial</Filter>
     </ClCompile>
     <ClCompile Include="..\tests\Main.cpp" />
+    <ClCompile Include="..\tests\LCSTest.cpp">
+      <Filter>LCS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LCS.cpp">
+      <Filter>LCS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Fibonacci.h">
@@ -29,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Factorial.h">
       <Filter>Factorial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LCS.h">
+      <Filter>LCS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
