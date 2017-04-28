@@ -79,11 +79,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\extern\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\extern\GoogleBenchmark\include;..\extern\GoogleBenchmark\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>benchmark_d.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\extern\lib\benchmark</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\extern\GoogleBenchmark\bin\x64\Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -91,11 +91,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\extern\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\extern\GoogleBenchmark\include;..\extern\GoogleBenchmark\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>benchmark_d.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\extern\lib\benchmark</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\extern\GoogleBenchmark\bin\x64\Debug</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -106,13 +106,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\extern\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\extern\GoogleBenchmark\include;..\extern\GoogleBenchmark\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>benchmark.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\extern\lib\benchmark</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\extern\GoogleBenchmark\bin\x64\MinSizeRel</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,13 +122,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\extern\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\extern\GoogleBenchmark\include;..\extern\GoogleBenchmark\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>benchmark.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\extern\lib\benchmark</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\extern\GoogleBenchmark\bin\x64\MinSizeRel</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
