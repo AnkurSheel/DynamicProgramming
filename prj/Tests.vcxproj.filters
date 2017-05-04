@@ -13,6 +13,9 @@
     <Filter Include="Common">
       <UniqueIdentifier>{7d25a09b-357f-4b55-b081-fd9d6a750bd6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Edit Distance">
+      <UniqueIdentifier>{5bc7c646-a136-490a-8dea-d86783e8e331}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\tests\FibonacciTest.cpp">
@@ -37,6 +40,12 @@
     <ClCompile Include="..\src\Custom2DArray.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\EditDistance.cpp">
+      <Filter>Edit Distance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tests\EditDistanceTest.cpp">
+      <Filter>Edit Distance</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Fibonacci.h">
@@ -50,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Custom2DArray.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\EditDistance.h">
+      <Filter>Edit Distance</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
