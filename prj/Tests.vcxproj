@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Custom2DArray.cpp" />
     <ClCompile Include="..\src\Factorial.cpp" />
     <ClCompile Include="..\src\Fibonacci.cpp" />
     <ClCompile Include="..\src\LCS.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="..\tests\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\Custom2DArray.h" />
     <ClInclude Include="..\src\Factorial.h" />
     <ClInclude Include="..\src\Fibonacci.h" />
     <ClInclude Include="..\src\LCS.h" />
