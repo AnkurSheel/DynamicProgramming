@@ -10,6 +10,9 @@
     <Filter Include="LCS">
       <UniqueIdentifier>{ddf9f37e-8a98-422d-be48-b1970b649715}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{7d25a09b-357f-4b55-b081-fd9d6a750bd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\tests\FibonacciTest.cpp">
@@ -31,6 +34,9 @@
     <ClCompile Include="..\src\LCS.cpp">
       <Filter>LCS</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Custom2DArray.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Fibonacci.h">
@@ -41,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="..\src\LCS.h">
       <Filter>LCS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Custom2DArray.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

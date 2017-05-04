@@ -138,12 +138,14 @@
     <ClCompile Include="..\benchmarks\FactorialBenchMark.cpp" />
     <ClCompile Include="..\benchmarks\FibonacciBenchmark.cpp" />
     <ClCompile Include="..\benchmarks\LCSBenchmark.cpp" />
+    <ClCompile Include="..\src\Custom2DArray.cpp" />
     <ClCompile Include="..\src\Factorial.cpp" />
     <ClCompile Include="..\src\Fibonacci.cpp" />
     <ClCompile Include="..\src\LCS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\benchmarks\CustomConsoleReporter.h" />
+    <ClInclude Include="..\src\Custom2DArray.h" />
     <ClInclude Include="..\src\Factorial.h" />
     <ClInclude Include="..\src\Fibonacci.h" />
     <ClInclude Include="..\src\LCS.h" />

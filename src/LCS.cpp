@@ -3,39 +3,19 @@
 
 using namespace std;
 
+//  *******************************************************************************************************************
 cLCS::cLCS()
-  : m_results(nullptr)
-  , m_rowLength(0)
-  , m_size(0)
 {
 }
 
+//  *******************************************************************************************************************
 cLCS::~cLCS()
 {
-  delete[] m_results;
-  m_results = nullptr;
-}
-
-//  *******************************************************************************************************************
-void cLCS::InitResultsArray()
-{
-  m_results = new int[m_size];
-  memset(m_results, -1, m_size * sizeof(int));
-}
-
-//  *******************************************************************************************************************
-void cLCS::Reset()
-{
-  if (m_results != nullptr)
-  {
-    memset(m_results, -1, m_size * sizeof(int));
-  }
 }
 
 //  *******************************************************************************************************************
 int cLCS::Recursive(const char* const first, const char* const second)
 {
-  Reset();
   if (*first == '\0' || *second == '\0')
   {
     return 0;
@@ -50,16 +30,13 @@ int cLCS::Recursive(const char* const first, const char* const second)
 //  *******************************************************************************************************************
 string cLCS::Memonized(const string& first, const string& second)
 {
-  Reset();
   int length1 = first.length();
   int length2 = second.length();
   if (length1 == 0 || length2 == 0)
   {
     return "";
   }
-  m_rowLength = length1;
-  m_size = (length1 + 1) * (length2 + 1);
-  InitResultsArray();
+  m_results.InitResultsArray(length1, length2);
   Memonized(first.data(), second.data(), 0, 0);
   return GetText(first, second);
 }
@@ -67,39 +44,36 @@ string cLCS::Memonized(const string& first, const string& second)
 //  *******************************************************************************************************************
 int cLCS::Memonized(const char* const first, const char* const second, int i, int j)
 {
-  if (m_results[GetIndex(i, j)] == -1)
+  if (m_results.GetElement(i, j) == -1)
   {
     if (first[i] == '\0' || second[j] == '\0')
     {
-      m_results[GetIndex(i, j)] = 0;
+      m_results.SetElement(i, j, 0);
     }
     else if (first[i] == second[j])
     {
-      m_results[GetIndex(i, j)] = 1 + Memonized(first, second, i + 1, j + 1);
+      m_results.SetElement(i, j, 1 + Memonized(first, second, i + 1, j + 1));
     }
     else
     {
       int val1 = Memonized(first, second, i + 1, j);
       int val2 = Memonized(first, second, i, j + 1);
-      m_results[GetIndex(i, j)] = max(val1, val2);
+      m_results.SetElement(i, j, max(val1, val2));
     }
   }
-  return m_results[GetIndex(i, j)];
+  return m_results.GetElement(i, j);
 }
 
 //  *******************************************************************************************************************
 string cLCS::DP(const std::string& first, const std::string& second)
 {
-  Reset();
   int length1 = first.length();
   int length2 = second.length();
   if (length1 == 0 || length2 == 0)
   {
     return "";
   }
-  m_rowLength = length1;
-  m_size = (length1 + 1) * (length2 + 1);
-  InitResultsArray();
+  m_results.InitResultsArray(length1, length2);
 
   for (int i = length1; i >= 0; i--)
   {
@@ -107,53 +81,25 @@ string cLCS::DP(const std::string& first, const std::string& second)
     {
       if (first[i] == '\0' || second[j] == '\0')
       {
-        m_results[GetIndex(i, j)] = 0;
+        m_results.SetElement(i, j, 0);
       }
       else if (first[i] == second[j])
       {
-        m_results[GetIndex(i, j)] = 1 + m_results[GetIndex(i + 1, j + 1)];
+        m_results.SetElement(i, j, 1 + m_results.GetElement(i + 1, j + 1));
       }
       else
       {
-        m_results[GetIndex(i, j)] = max(m_results[GetIndex(i + 1, j)], m_results[GetIndex(i, j + 1)]);
+        m_results.SetElement(i, j, max(m_results.GetElement(i + 1, j), m_results.GetElement(i, j + 1)));
       }
     }
   }
   return GetText(first, second);
 }
 
-void cLCS::PrintArray(const string& first, const string& second)
-{
-  int width = 4;
-  for (int i = 0; i < first.length(); i++)
-  {
-    cout << setw(width) << first[i];
-  }
-  int j = 0;
-  for (int i = 0; i < m_size; i++)
-  {
-    if (i % (m_rowLength + 1) == 0)
-    {
-      cout << "\n";
-      if (j < second.length())
-      {
-        cout << second[j];
-        j++;
-        width = 3;
-      }
-    }
-    else
-    {
-      width = 4;
-    }
-    cout << setw(width) << m_results[i];
-  }
-  cout << "\n";
-}
-
+//  *******************************************************************************************************************
 string cLCS::GetText(const string& first, const string& second)
 {
-  if (m_results[0] == 0)
+  if (m_results.GetElement(0, 0) == 0)
   {
     return "";
   }
@@ -168,7 +114,7 @@ string cLCS::GetText(const string& first, const string& second)
       i++;
       j++;
     }
-    else if (m_results[GetIndex(i + 1, j)] >= m_results[GetIndex(i, j + 1)])
+    else if (m_results.GetElement(i + 1, j) >= m_results.GetElement(i, j + 1))
     {
       i++;
     }
