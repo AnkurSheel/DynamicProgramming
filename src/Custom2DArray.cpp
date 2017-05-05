@@ -4,35 +4,35 @@
 using namespace std;
 
 Common::cCustom2DArray::cCustom2DArray()
-  : m_results(nullptr)
-  , m_rowLength(0)
-  , m_size(0)
+  : m_array(nullptr)
+  , m_numberOfRows(0)
+  , m_numberOfColumns(0)
 {
 }
 
 Common::cCustom2DArray::~cCustom2DArray()
 {
-  delete[] m_results;
-  m_results = nullptr;
+  delete[] m_array;
+  m_array = nullptr;
 }
 
 //  *******************************************************************************************************************
-void Common::cCustom2DArray::InitResultsArray(int length1, int length2)
+void Common::cCustom2DArray::Init(int rows, int columns)
 {
-  int newSize = (length1 + 1) * (length2 + 1);
-  if (m_rowLength != length1 && m_size != newSize)
+  int newSize = rows * columns;
+  if (m_numberOfRows != rows || m_numberOfColumns != m_numberOfColumns)
   {
-    if (m_results != nullptr)
+    if (m_array != nullptr)
     {
-      delete[] m_results;
-      m_results = nullptr;
+      delete[] m_array;
+      m_array = nullptr;
     }
 
-    m_rowLength = length1;
-    m_size = newSize;
+    m_numberOfRows = rows;
+    m_numberOfColumns = columns;
 
-    m_results = new int[m_size];
-    memset(m_results, -1, m_size * sizeof(int));
+    m_array = new int[GetSize()];
+    memset(m_array, -1, GetSize() * sizeof(int));
   }
   Reset();
 }
@@ -40,9 +40,9 @@ void Common::cCustom2DArray::InitResultsArray(int length1, int length2)
 //  *******************************************************************************************************************
 void Common::cCustom2DArray::Reset()
 {
-  if (m_results != nullptr)
+  if (m_array != nullptr)
   {
-    memset(m_results, -1, m_size * sizeof(int));
+    memset(m_array, -1, GetSize() * sizeof(int));
   }
 }
 
@@ -55,9 +55,9 @@ void Common::cCustom2DArray::PrintArray(const string& first, const string& secon
     cout << setw(width) << first[i];
   }
   int j = 0;
-  for (int i = 0; i < m_size; i++)
+  for (int i = 0; i < GetSize(); i++)
   {
-    if (i % (m_rowLength + 1) == 0)
+    if (i % (m_numberOfRows) == 0)
     {
       cout << "\n";
       if (j < second.length())
@@ -71,7 +71,7 @@ void Common::cCustom2DArray::PrintArray(const string& first, const string& secon
     {
       width = 4;
     }
-    cout << setw(width) << m_results[i];
+    cout << setw(width) << m_array[i];
   }
   cout << "\n";
 }
