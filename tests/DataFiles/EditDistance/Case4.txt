@@ -1,0 +1,5 @@
+Number Of Operations : 2
+Starting String : cat
+Insert character r : Current String ca : Updated String car
+Replace character t with character s : Current String cart : Updated String cars
+Final String : cars

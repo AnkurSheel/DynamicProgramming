@@ -50,7 +50,7 @@ namespace Benchmarks
   //  *******************************************************************************************************************
   BENCHMARK_DEFINE_F(EditDistance, Memonized)(State& state)
   {
-    int EditDistance;
+    string EditDistance;
     while (state.KeepRunning())
     {
       benchmark::DoNotOptimize(EditDistance = m_EditDistance.Memonized(m_string1, m_string2));
@@ -61,7 +61,7 @@ namespace Benchmarks
   //  *******************************************************************************************************************
   BENCHMARK_DEFINE_F(EditDistance, DP)(State& state)
   {
-    int EditDistance;
+    string EditDistance;
     while (state.KeepRunning())
     {
       benchmark::DoNotOptimize(EditDistance = m_EditDistance.DP(m_string1, m_string2));

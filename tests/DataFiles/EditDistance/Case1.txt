@@ -1,0 +1,4 @@
+Number Of Operations : 1
+Starting String : geek
+Insert character s : Current String ge : Updated String ges
+Final String : gesek

@@ -1,0 +1,5 @@
+Number Of Operations : 2
+Starting String : ABCD
+Delete character B : Current String AB : Updated String A 
+Current String "AC" : Delete remaining 1 characters from position 3
+Final String : AC

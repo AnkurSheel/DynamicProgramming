@@ -1,0 +1,4 @@
+Number Of Operations : 1
+Starting String : cat
+Replace character a with character u : Current String ca : Updated String cu
+Final String : cut

@@ -1,0 +1,6 @@
+Number Of Operations : 3
+Starting String : sunday
+Insert character a : Current String s : Updated String sa
+Insert character t : Current String sa : Updated String sat
+Replace character n with character r : Current String satun : Updated String satur
+Final String : saturday

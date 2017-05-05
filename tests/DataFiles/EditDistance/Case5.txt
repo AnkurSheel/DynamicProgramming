@@ -1,0 +1,5 @@
+Number Of Operations : 2
+Starting String : AC
+Insert character B : Current String A : Updated String AB
+Current String "ABC" : Insert remaining 1 characters from the second string at position 3
+Final String : ABCD
