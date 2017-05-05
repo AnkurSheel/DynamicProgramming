@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="Common::cCustom2DArray">
+        <DisplayString Condition="m_numberOfRows == 0">empty</DisplayString>
+        <DisplayString>{{ rows = {m_numberOfRows}, cols = {m_numberOfColumns}}</DisplayString>
+        <Expand>
+            <ArrayItems>
+                <Direction>Forward</Direction>
+                <Rank>2</Rank>
+                <Size>$i==0?m_numberOfRows:m_numberOfColumns</Size>
+                <ValuePointer>m_array</ValuePointer>
+            </ArrayItems>
+        </Expand>
+    </Type>
+</AutoVisualizer>

@@ -1,0 +1,4 @@
+Number Of Operations : 3
+Starting String : ABC
+Current String "ABC" : Delete remaining 3 characters from position 0
+Final String : 

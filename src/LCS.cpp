@@ -36,7 +36,7 @@ string cLCS::Memonized(const string& first, const string& second)
   {
     return "";
   }
-  m_results.InitResultsArray(length1, length2);
+  m_results.Init(length1 + 1, length2 + 1);
   Memonized(first.data(), second.data(), 0, 0);
   return GetText(first, second);
 }
@@ -73,7 +73,7 @@ string cLCS::DP(const std::string& first, const std::string& second)
   {
     return "";
   }
-  m_results.InitResultsArray(length1, length2);
+  m_results.Init(length1 + 1, length2 + 1);
 
   for (int i = length1; i >= 0; i--)
   {

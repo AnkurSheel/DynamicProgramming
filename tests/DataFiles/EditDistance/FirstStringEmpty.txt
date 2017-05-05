@@ -1,0 +1,4 @@
+Number Of Operations : 3
+Starting String : 
+Current String "" : Insert remaining 3 characters from the second string at position 0
+Final String : ABC
