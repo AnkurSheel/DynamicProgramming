@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="std::basic_stringstream&lt;char,*&gt;">
+        <DisplayString>{_Mystrbuf->_Gfirst, s}</DisplayString>
+        <StringView>_Mystrbuf->_Gfirst</StringView>
+        <Expand>
+            <Item Name="Contents">_Mystrbuf->_Gfirst</Item>
+            <Item Name="[state]">_Mystate</Item>
+        </Expand>
+    </Type>
+</AutoVisualizer>
+
