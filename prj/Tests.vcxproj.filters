@@ -13,6 +13,15 @@
     <Filter Include="Common">
       <UniqueIdentifier>{7d25a09b-357f-4b55-b081-fd9d6a750bd6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Edit Distance">
+      <UniqueIdentifier>{5bc7c646-a136-490a-8dea-d86783e8e331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Edit Distance\DataFiles">
+      <UniqueIdentifier>{4a23b955-adb9-4a8b-806e-c8d402edcfbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Visualisers">
+      <UniqueIdentifier>{55b92dd5-106a-49d1-8fb6-3ba07f4c38cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\tests\FibonacciTest.cpp">
@@ -37,6 +46,12 @@
     <ClCompile Include="..\src\Custom2DArray.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\EditDistance.cpp">
+      <Filter>Edit Distance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tests\EditDistanceTest.cpp">
+      <Filter>Edit Distance</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Fibonacci.h">
@@ -51,5 +66,45 @@
     <ClInclude Include="..\src\Custom2DArray.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\EditDistance.h">
+      <Filter>Edit Distance</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\Visualisers\Custom2DArray.natvis">
+      <Filter>Visualisers</Filter>
+    </Natvis>
+    <Natvis Include="..\Visualisers\stringstream.natvis">
+      <Filter>Visualisers</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\tests\DataFiles\EditDistance\Case1.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\NoChange.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\FirstStringEmpty.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\SecondStringEmpty.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\Case2.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\Case3.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\Case4.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\Case5.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
+    <Text Include="..\tests\DataFiles\EditDistance\Case6.txt">
+      <Filter>Edit Distance\DataFiles</Filter>
+    </Text>
   </ItemGroup>
 </Project>

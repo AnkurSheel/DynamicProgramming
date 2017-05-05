@@ -134,9 +134,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Custom2DArray.cpp" />
+    <ClCompile Include="..\src\EditDistance.cpp" />
     <ClCompile Include="..\src\Factorial.cpp" />
     <ClCompile Include="..\src\Fibonacci.cpp" />
     <ClCompile Include="..\src\LCS.cpp" />
+    <ClCompile Include="..\tests\EditDistanceTest.cpp" />
     <ClCompile Include="..\tests\FactorialTest.cpp" />
     <ClCompile Include="..\tests\FibonacciTest.cpp" />
     <ClCompile Include="..\tests\LCSTest.cpp" />
@@ -144,9 +146,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Custom2DArray.h" />
+    <ClInclude Include="..\src\EditDistance.h" />
     <ClInclude Include="..\src\Factorial.h" />
     <ClInclude Include="..\src\Fibonacci.h" />
     <ClInclude Include="..\src\LCS.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\Visualisers\Custom2DArray.natvis" />
+    <Natvis Include="..\Visualisers\stringstream.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\tests\DataFiles\EditDistance\Case1.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\Case2.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\Case3.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\Case4.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\Case5.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\Case6.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\FirstStringEmpty.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\NoChange.txt" />
+    <Text Include="..\tests\DataFiles\EditDistance\SecondStringEmpty.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
