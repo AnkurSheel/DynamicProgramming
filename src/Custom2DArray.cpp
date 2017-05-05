@@ -19,21 +19,17 @@ Common::cCustom2DArray::~cCustom2DArray()
 //  *******************************************************************************************************************
 void Common::cCustom2DArray::Init(int rows, int columns)
 {
-  int newSize = rows * columns;
-  if (m_numberOfRows != rows || m_numberOfColumns != m_numberOfColumns)
+  if (m_array != nullptr)
   {
-    if (m_array != nullptr)
-    {
-      delete[] m_array;
-      m_array = nullptr;
-    }
-
-    m_numberOfRows = rows;
-    m_numberOfColumns = columns;
-
-    m_array = new int[GetSize()];
-    memset(m_array, -1, GetSize() * sizeof(int));
+    delete[] m_array;
+    m_array = nullptr;
   }
+
+  m_numberOfRows = rows;
+  m_numberOfColumns = columns;
+
+  m_array = new int[GetSize()];
+  memset(m_array, -1, GetSize() * sizeof(int));
   Reset();
 }
 
