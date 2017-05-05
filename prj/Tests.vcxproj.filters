@@ -71,14 +71,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="..\Visualisers\Custom2DArray.natvis">
-      <Filter>Visualisers</Filter>
-    </Natvis>
-    <Natvis Include="..\Visualisers\stringstream.natvis">
-      <Filter>Visualisers</Filter>
-    </Natvis>
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="..\tests\DataFiles\EditDistance\Case1.txt">
       <Filter>Edit Distance\DataFiles</Filter>
     </Text>
@@ -106,5 +98,13 @@
     <Text Include="..\tests\DataFiles\EditDistance\Case6.txt">
       <Filter>Edit Distance\DataFiles</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\Visualisers\c++\Custom2DArray.natvis">
+      <Filter>Visualisers</Filter>
+    </Natvis>
+    <Natvis Include="..\Visualisers\c++\stringstream.natvis">
+      <Filter>Visualisers</Filter>
+    </Natvis>
   </ItemGroup>
 </Project>

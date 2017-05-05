@@ -152,10 +152,6 @@
     <ClInclude Include="..\src\LCS.h" />
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="..\Visualisers\Custom2DArray.natvis" />
-    <Natvis Include="..\Visualisers\stringstream.natvis" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="..\tests\DataFiles\EditDistance\Case1.txt" />
     <Text Include="..\tests\DataFiles\EditDistance\Case2.txt" />
     <Text Include="..\tests\DataFiles\EditDistance\Case3.txt" />
@@ -165,6 +161,10 @@
     <Text Include="..\tests\DataFiles\EditDistance\FirstStringEmpty.txt" />
     <Text Include="..\tests\DataFiles\EditDistance\NoChange.txt" />
     <Text Include="..\tests\DataFiles\EditDistance\SecondStringEmpty.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\Visualisers\c++\Custom2DArray.natvis" />
+    <Natvis Include="..\Visualisers\c++\stringstream.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
