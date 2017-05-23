@@ -4,3 +4,6 @@
 [submodule "extern/GoogleBenchmark"]
 	path = extern/GoogleBenchmark
 	url = https://github.com/AnkurSheel/benchmark.git
+[submodule "Visualisers"]
+	path = Visualisers
+	url = https://github.com/AnkurSheel/DebuggerVisualisers.git
