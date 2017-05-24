@@ -18,7 +18,7 @@ namespace Common
 
   private:
     void Reset();
-    int GetIndex(int row, int column) const { return row + (m_numberOfRows * column); }
+    int GetIndex(int row, int column) const { return row * m_numberOfColumns + column; }
     int GetSize() const { return m_numberOfRows * m_numberOfColumns; }
 
   private:
