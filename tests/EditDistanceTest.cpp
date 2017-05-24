@@ -24,7 +24,7 @@ namespace Tests
     EXPECT_EQ(0, m_EditDistance.Recursive("", ""));
     EXPECT_EQ(0, m_EditDistance.Recursive("ABC", "ABC"));
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/NoChange.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/NoChange.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -39,7 +39,7 @@ namespace Tests
   {
     EXPECT_EQ(3, m_EditDistance.Recursive("", "ABC"));
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/FirstStringEmpty.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/FirstStringEmpty.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -51,7 +51,7 @@ namespace Tests
   {
     EXPECT_EQ(3, m_EditDistance.Recursive("ABC", ""));
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/SecondStringEmpty.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/SecondStringEmpty.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -65,7 +65,7 @@ namespace Tests
     string string1 = "geek";
     string string2 = "gesek";
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/Case1.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/Case1.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -79,7 +79,7 @@ namespace Tests
     string string1 = "cat";
     string string2 = "cut";
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/Case2.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/Case2.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -93,7 +93,7 @@ namespace Tests
     string string1 = "sunday";
     string string2 = "saturday";
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/Case3.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/Case3.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -107,7 +107,7 @@ namespace Tests
     string string1 = "cat";
     string string2 = "cars";
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/Case4.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/Case4.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -121,7 +121,7 @@ namespace Tests
     string string1 = "AC";
     string string2 = "ABCD";
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/Case5.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/Case5.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
@@ -135,7 +135,7 @@ namespace Tests
     string string1 = "ABCD";
     string string2 = "AC";
 
-    resultFile.open("../../../tests/DataFiles/EditDistance/Case6.txt");
+    resultFile.open("./tests/DataFiles/EditDistance/Case6.txt");
     stringstream expectedStream;
     expectedStream << resultFile.rdbuf();
 
