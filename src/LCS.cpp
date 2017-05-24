@@ -30,8 +30,9 @@ int cLCS::Recursive(const char* const first, const char* const second)
 //  *******************************************************************************************************************
 string cLCS::Memonized(const string& first, const string& second)
 {
-  int length1 = first.length();
-  int length2 = second.length();
+  int length1 = static_cast<int>(first.length());
+  int length2 = static_cast<int>(second.length());
+
   if (length1 == 0 || length2 == 0)
   {
     return "";
@@ -67,8 +68,9 @@ int cLCS::Memonized(const char* const first, const char* const second, int i, in
 //  *******************************************************************************************************************
 string cLCS::DP(const std::string& first, const std::string& second)
 {
-  int length1 = first.length();
-  int length2 = second.length();
+  int length1 = static_cast<int>(first.length());
+  int length2 = static_cast<int>(second.length());
+
   if (length1 == 0 || length2 == 0)
   {
     return "";

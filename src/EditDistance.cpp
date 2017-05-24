@@ -23,8 +23,8 @@ int cEditDistance::Recursive(const string& first, const string& second)
 //  *******************************************************************************************************************
 int cEditDistance::Recursive(const string& first, const string& second, int index1, int index2)
 {
-  int length1 = first.length() - index1;
-  int length2 = second.length() - index2;
+  int length1 = static_cast<int>(first.length() - index1);
+  int length2 = static_cast<int>(second.length() - index2);
 
   if (length1 == 0)
   {
@@ -64,8 +64,8 @@ int cEditDistance::Recursive(const string& first, const string& second, int inde
 //  *******************************************************************************************************************
 string cEditDistance::Memonized(const string& first, const string& second)
 {
-  int length1 = first.length();
-  int length2 = second.length();
+  int length1 = static_cast<int>(first.length());
+  int length2 = static_cast<int>(second.length());
 
   m_results.Init(length1 + 1, length2 + 1);
   m_Operations.Init(length1, length2);
@@ -78,8 +78,8 @@ int cEditDistance::Memonized(const string& first, const string& second, int inde
 {
   if (m_results.GetElement(index1, index2) == -1)
   {
-    int length1 = first.length() - index1;
-    int length2 = second.length() - index2;
+    int length1 = static_cast<int>(first.length() - index1);
+    int length2 = static_cast<int>(second.length() - index2);
 
     if (length1 == 0)
     {
@@ -124,10 +124,11 @@ int cEditDistance::Memonized(const string& first, const string& second, int inde
 //  *******************************************************************************************************************
 string cEditDistance::DP(const std::string& first, const std::string& second)
 {
-  int length1 = first.length();
-  int length2 = second.length();
+  int length1 = static_cast<int>(first.length());
+  int length2 = static_cast<int>(second.length());
 
   m_results.Init(length1 + 1, length2 + 1);
+  m_Operations.Init(length1, length2);
 
   for (int index1 = length1; index1 >= 0; index1--)
   {
