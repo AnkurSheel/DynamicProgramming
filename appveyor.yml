@@ -1,7 +1,13 @@
 version: 0.0.{build}
+platform: x64
 environment:
   APPVEYOR_RDP_PASSWORD:
     secure: Pa24rtLE52cMBdNE8d8IlQ==
+  matrix:
+  - configuration: Debug
+    testPath: prj\x64\Debug\
+  - configuration: Release
+    testPath: prj\x64\Release\
 install:
 - cmd: git submodule update --init --recursive
 before_build:
@@ -11,6 +17,6 @@ build:
   parallel: true
   verbosity: minimal
 test_script:
-- cmd: prj\x64\Debug\Tests.exe --gtest_output=xml:tests.xml
+- cmd: '%testPath%Tests.exe --gtest_output=xml:tests.xml'
 on_finish:
 - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
