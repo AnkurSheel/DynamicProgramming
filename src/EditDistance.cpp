@@ -128,6 +128,7 @@ string cEditDistance::DP(const std::string& first, const std::string& second)
   int length2 = second.length();
 
   m_results.Init(length1 + 1, length2 + 1);
+  m_Operations.Init(length1, length2);
 
   for (int index1 = length1; index1 >= 0; index1--)
   {
