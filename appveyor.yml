@@ -8,6 +8,12 @@ environment:
     testPath: prj\x64\Debug\
   - configuration: Release
     testPath: prj\x64\Release\
+only_commits:
+  files:
+    - prj/
+    - src/
+    - benchmarks/
+    - tests/
 install:
 - cmd: git submodule update --init --recursive
 before_build:
